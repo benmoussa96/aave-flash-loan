@@ -48,14 +48,14 @@ contract FlashLoanArbitrage is FlashLoanSimpleReceiverBase {
     }
 
     /**
-        This function is called after your contract has received the flash loaned amount
+     * This function is called after your contract has received the flash loaned amount
      */
     function executeOperation(
         address asset,
         uint256 amount,
         uint256 premium,
-        address initiator,
-        bytes calldata params
+        address /*initiator*/,
+        bytes calldata /*params*/
     ) external override returns (bool) {
         //
         // This contract now has the funds requested.

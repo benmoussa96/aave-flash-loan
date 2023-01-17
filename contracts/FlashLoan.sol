@@ -26,8 +26,8 @@ contract FlashLoan is FlashLoanSimpleReceiverBase {
     address asset,
     uint256 amount,
     uint256 premium,
-    address initiator,
-    bytes calldata params
+    address /*initiator*/,
+    bytes calldata /*params*/
   ) external override returns (bool) {
     uint256 amountOwed = amount + premium;
     IERC20(asset).approve(address(POOL), amountOwed);
