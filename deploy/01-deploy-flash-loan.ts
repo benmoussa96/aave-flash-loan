@@ -12,7 +12,9 @@ const deployFlashLoan: DeployFunction = async function ({
   const { deployer } = await getNamedAccounts();
   const chainId: number = network.config.chainId!;
 
-  const flashLoanArgs = ["0xc4dCB5126a3AfEd129BC3668Ea19285A9f56D15D"];
+  const aaveV3PoolAddressProvider =
+    networkConfig[chainId]["aaveV3PoolAddressProvider"];
+  const flashLoanArgs = [aaveV3PoolAddressProvider];
 
   const flashLoan = await deploy("FlashLoan", {
     from: deployer,
@@ -31,3 +33,6 @@ const deployFlashLoan: DeployFunction = async function ({
     await verify(flashLoan.address, flashLoanArgs);
   }
 };
+
+export default deployFlashLoan;
+deployFlashLoan.tags = ["all", "flashLoan"];

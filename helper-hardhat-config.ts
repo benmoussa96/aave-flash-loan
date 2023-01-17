@@ -1,6 +1,7 @@
 export interface networkConfigItem {
   name?: string;
   ethUsdPriceFeed?: string;
+  aaveV3PoolAddressProvider?: string;
   blockConfirmations?: number;
 }
 
@@ -17,6 +18,7 @@ export const networkConfig: networkConfigInfo = {
   5: {
     name: "goerli",
     ethUsdPriceFeed: "0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e",
+    aaveV3PoolAddressProvider: "0xc4dCB5126a3AfEd129BC3668Ea19285A9f56D15D",
     blockConfirmations: 6,
   },
   137: {
