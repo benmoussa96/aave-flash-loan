@@ -1,7 +1,8 @@
 export interface networkConfigItem {
   name?: string;
-  ethUsdPriceFeed?: string;
   aaveV3PoolAddressProvider?: string;
+  aaveDAIAddress?: string;
+  aaveUSDCAddress?: string;
   blockConfirmations?: number;
 }
 
@@ -12,18 +13,17 @@ export interface networkConfigInfo {
 export const networkConfig: networkConfigInfo = {
   1: {
     name: "mainnet",
-    ethUsdPriceFeed: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
     blockConfirmations: 6,
   },
   5: {
     name: "goerli",
-    ethUsdPriceFeed: "0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e",
     aaveV3PoolAddressProvider: "0xc4dCB5126a3AfEd129BC3668Ea19285A9f56D15D",
+    aaveDAIAddress: "0xDF1742fE5b0bFc12331D8EAec6b478DfDbD31464",
+    aaveUSDCAddress: "0xA2025B15a1757311bfD68cb14eaeFCc237AF5b43",
     blockConfirmations: 6,
   },
   137: {
     name: "polygon",
-    ethUsdPriceFeed: "0xF9680D99D6C9589e2a93a78A04A279e509205945",
     blockConfirmations: 6,
   },
 };

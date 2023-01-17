@@ -8,13 +8,13 @@ import {FlashLoanSimpleReceiverBase} from "@aave/core-v3/contracts/flashloan/bas
 import {IPoolAddressesProvider} from "@aave/core-v3/contracts/interfaces/IPoolAddressesProvider.sol";
 import {IERC20} from "@aave/core-v3/contracts/dependencies/openzeppelin/contracts/IERC20.sol";
 
-error FundMe__NotOwner();
+error FlashLoan__NotOwner();
 
 contract FlashLoan is FlashLoanSimpleReceiverBase {
     address private immutable i_owner;
 
     modifier onlyOwner() {
-        if (msg.sender != i_owner) { revert FundMe__NotOwner(); }
+        if (msg.sender != i_owner) { revert FlashLoan__NotOwner(); }
         _;
     }
 
