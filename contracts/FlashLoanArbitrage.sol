@@ -20,13 +20,10 @@ error FlashLoanArbitrage__NotOwner();
 contract FlashLoanArbitrage is FlashLoanSimpleReceiverBase {
     address private immutable i_owner;
 
-    // Aave ERC20 Token addresses on Goerli network
-    // address private immutable daiAddress =
-    //     0xDF1742fE5b0bFc12331D8EAec6b478DfDbD31464;
-    // address private immutable usdcAddress =
-    //     0xA2025B15a1757311bfD68cb14eaeFCc237AF5b43;
-    // address private dexContractAddress =
-    //     0xD6e8c479B6B62d8Ce985C0f686D39e96af9424df;
+    // Aave ERC20 Token addresses on Goerli network:
+    // daiAddress = 0xDF1742fE5b0bFc12331D8EAec6b478DfDbD31464;
+    // usdcAddress = 0xA2025B15a1757311bfD68cb14eaeFCc237AF5b43;
+    // dexContractAddress = 0xD6e8c479B6B62d8Ce985C0f686D39e96af9424df;
 
     IERC20 private dai;
     IERC20 private usdc;
