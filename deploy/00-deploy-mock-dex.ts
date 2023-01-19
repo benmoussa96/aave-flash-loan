@@ -22,6 +22,7 @@ const deployMockDex: DeployFunction = async function ({
     log: true,
     args: [DAI_ADDRESS, USDC_ADDRESS],
   });
+
   console.log("Mock Dex dployed!");
   console.log("-------------------------------------------");
 };

@@ -45,13 +45,13 @@ contract FlashLoan is FlashLoanSimpleReceiverBase {
     POOL.flashLoanSimple(receiverAddress, asset, amount, params, referralCode);
   }
 
-  function getBalance(address _tokenAddress) external view returns (uint256) {
-    return IERC20(_tokenAddress).balanceOf(address(this));
-  }
-
   function withdraw(address _tokenAddress) external onlyOwner {
     IERC20 token = IERC20(_tokenAddress);
     token.transfer(payable(msg.sender), token.balanceOf(address(this)));
+  }
+
+  function getBalance(address _tokenAddress) external view returns (uint256) {
+    return IERC20(_tokenAddress).balanceOf(address(this));
   }
 
   receive() external payable {}

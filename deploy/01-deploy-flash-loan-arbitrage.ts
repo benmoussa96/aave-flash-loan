@@ -29,7 +29,7 @@ const deployFlashLoanArbitrage: DeployFunction = async function ({
   ];
 
   console.log(
-    `Deploying FlashLoanArbiitrage with MockDex(${mockDexAddress})...`
+    `Deploying FlashLoanArbitrage with MockDex(${mockDexAddress})...`
   );
 
   const flashLoan = await deploy("FlashLoanArbitrage", {
